@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+	font-family: "spacemonobold";
+	src: url("/assets/fonts/Space_Mono/SpaceMono-Bold.ttf");
+}
+
+@font-face {
+	font-family: "spacemonobolditalic";
+	src: url("/assets/fonts/Space_Mono/SpaceMono-BoldItalic.ttf");
+}
+
+@font-face {
+	font-family: "spacemonoitalic";
+	src: url("/assets/fonts/Space_Mono/SpaceMono-Italic.ttf");
+}
+
+@font-face {
+	font-family: "spacemonoregular";
+	src: url("/assets/fonts/Space_Mono/SpaceMono-Regular.ttf");
+}
+
+* {
+	box-sizing: border-box;
+	font-family: "spacemonoregular", "arial";
+}
+
+/* Hide scrollbar for Chrome, Safari, and Opera */
+* ::-webkit-scrollbar {
+	display: none;
+}
+
+html {
+	height: 100vh;
+	font-size: 62.5%;
+	overflow-y: scroll;
+}
+
+body {
+	height: fit-content;
+	/* Hide scrollbar for Internet Explorer and Edge */
+	-ms-overflow-style: none; /* IE and Edge */
+	scrollbar-width: none; /* Firefox */
+}
