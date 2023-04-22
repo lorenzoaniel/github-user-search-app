@@ -1,4 +1,3 @@
-/** @type {import('tailwindcss').Config} */
 module.exports = {
 	darkMode: "class",
 	content: [
@@ -7,37 +6,46 @@ module.exports = {
 		"./src/app/**/*.{js,ts,jsx,tsx}",
 	],
 	theme: {
+		backgroundColor: {
+			primary: "#FEFEFE",
+			secondary: "#F6F8FF",
+			"btn-primary": "#0079FF",
+			"dark-primary": "#1E2A47",
+			"dark-secondary": "#141D2F",
+			"dark-btn-primary": "#0079FF",
+		},
+		textColor: {
+			primary: "#4B6A9B",
+			secondary: "#2B3442",
+			"link-primary": "#0079FF",
+			toggle: "#697C9A",
+			"btn-primary": "#FFFFFF",
+			"dark-btn-primary": "#FEFEFE",
+			"dark-primary": "#FFFFFF",
+		},
+		fontFamily: {
+			spacebold: [`spacemonobold`, "monospace"],
+			spacereg: [`spacemonoregular`, "monospace"],
+		},
+		fontSize: {
+			h1: ["2.6rem", { lineHeight: "3.8rem", fontWeight: "700" }],
+			h2: ["2.2rem", { lineHeight: "3.3rem", fontWeight: "700" }],
+			h3: ["1.6rem", { lineHeight: "2.4rem", fontWeight: "400" }],
+			h4: ["1.3rem", { lineHeight: "2.0rem", fontWeight: "400" }],
+			body: ["1.5rem", { lineHeight: "2.5rem", fontWeight: "400" }],
+			themetoggle: ["1.3rem", { lineHeight: "1.9rem", fontWeight: "700" }],
+			searchbtn: ["1.4rem", { lineHeight: "2.1rem", fontWeight: "400" }],
+			searchbar: ["1.3rem", { lineHeight: "2.5rem", fontWeight: "400" }],
+		},
+		boxShadow: {
+			container: "0 1.6rem 3rem 1rem rgba(70, 96, 187, 0.198567)",
+			"dark-container": "0 0 0 0 rgba(70, 96, 187, 0)",
+		},
+	},
+	variants: {
 		extend: {
-			//LIGHTMODE
-			backgroundColor: (theme) => ({
-				//extends tailwinds original pallete
-				...theme("colors"),
-				primary: "#FEFEFE",
-				secondary: "#F6F8FF",
-				"btn-primary": "#0079FF",
-			}),
-			textColor: (theme) => ({
-				...theme("colors"),
-				primary: "#4B6A9B",
-				secondary: "#2B3442",
-				"link-primary": "#0079FF",
-				toggle: "#697C9A",
-				"btn-primary": "#FEFEFE",
-			}),
-			//DARKMODE
-			dark: {
-				backgroundColor: (theme) => ({
-					//extends tailwinds original pallete
-					...theme("colors"),
-					primary: "#1E2A47",
-					secondary: "#141D2F",
-					"btn-primary": "#0079FF",
-				}),
-				textColor: (theme) => ({
-					...theme("colors"),
-					primary: "#FFFFFF",
-				}),
-			},
+			backgroundColor: ["dark"],
+			textColor: ["dark"],
 		},
 	},
 	plugins: [],
