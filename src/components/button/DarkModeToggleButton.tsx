@@ -5,6 +5,7 @@ import React, { useEffect, useState } from "react";
 
 const DarkModeToggleButton: React.FC = () => {
 	const [isDarkMode, setIsDarkMode] = useState(false);
+	const toggleImgSrc = isDarkMode ? "/assets/images/icon-sun.svg" : "/assets/images/icon-moon.svg";
 
 	// Load the initial dark mode preference from localStorage or prefers-color-scheme on mount
 	useEffect(() => {
@@ -34,11 +35,12 @@ const DarkModeToggleButton: React.FC = () => {
 			className="theme-toggle-button
 			bg-transparent
 			h-[4.6rem]
-			w-[8.4rem]
+			w-fit
 			rounded-[1rem]
 			flex
-			justify-between
+			justify-center
 			items-center
+			gap-x-[1.6rem]
 			text-primary
 			dark:bg-transparent
 			dark:text-dark-primary
@@ -53,13 +55,7 @@ const DarkModeToggleButton: React.FC = () => {
 			>
 				{isDarkMode ? "LIGHT" : "DARK"}
 			</span>
-			<Image
-				width={20}
-				height={20}
-				src={"/assets/images/icon-moon.svg"}
-				alt={"theme-icon"}
-				priority
-			/>
+			<Image width={20} height={20} src={toggleImgSrc} alt={"theme-icon"} priority />
 		</button>
 	);
 };
