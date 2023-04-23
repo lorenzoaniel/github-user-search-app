@@ -1,7 +1,7 @@
 import React from "react";
 
 const SearchBar: React.FC = () => {
-	const placeholder = "Search Github username";
+	const placeholder = "Search Github username...";
 
 	return (
 		<input
@@ -12,6 +12,7 @@ const SearchBar: React.FC = () => {
       text-searchbar
       text-ellipsis
       dark:bg-dark-primary
+      focus:outline-none
       "
 			placeholder={placeholder}
 		/>
