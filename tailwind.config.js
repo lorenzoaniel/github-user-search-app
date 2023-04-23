@@ -33,6 +33,7 @@ module.exports = {
 			h3: ["1.6rem", { lineHeight: "2.4rem", fontWeight: "400" }],
 			h4: ["1.3rem", { lineHeight: "2.0rem", fontWeight: "400" }],
 			body: ["1.5rem", { lineHeight: "2.5rem", fontWeight: "400" }],
+			statstitle: ["1.1rem", { lineHeight: "1.6", fontWeight: "400" }],
 			themetoggle: ["1.3rem", { lineHeight: "1.9rem", fontWeight: "700" }],
 			searchbtn: ["1.4rem", { lineHeight: "2.1rem", fontWeight: "400" }],
 			searchbar: ["1.3rem", { lineHeight: "2.5rem", fontWeight: "400" }],
