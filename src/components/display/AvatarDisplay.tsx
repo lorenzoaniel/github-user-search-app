@@ -30,10 +30,11 @@ const AvatarDisplay: React.FC<Props> = ({ username, githubhandle, joindate, avat
 			/>
 			<div
 				className="avatar-display-descwrapper
-        h-[6.9rem]
+        h-fit
         w-fit
         flex
         flex-col
+				self-center
         "
 			>
 				<h3
