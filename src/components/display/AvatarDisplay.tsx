@@ -6,20 +6,32 @@ interface Props {
 	githubhandle: string;
 	joindate: string;
 	avatarimgsrc: string;
+	bio: string;
 }
 
-const AvatarDisplay: React.FC<Props> = ({ username, githubhandle, joindate, avatarimgsrc }) => {
+const AvatarDisplay: React.FC<Props> = ({
+	username,
+	githubhandle,
+	joindate,
+	avatarimgsrc,
+	bio,
+}) => {
 	return (
 		<div
 			className="avatar-display
-      flex
+      grid
+			grid-cols-4
+			grid-rows-[minmax(0, 1fr)_fit-content]
       w-fit
       h-fit
       gap-x-[1.95rem]
+			gap-y-[3.3rem]
       "
 		>
 			<Image
 				className="avatar-display-img
+				row-span-1
+				col-span-1
 				md:w-[11.7rem]
 				md:h-[11.7rem]
 				"
@@ -30,6 +42,8 @@ const AvatarDisplay: React.FC<Props> = ({ username, githubhandle, joindate, avat
 			/>
 			<div
 				className="avatar-display-descwrapper
+				row-span-1
+				col-span-2
         h-fit
         w-fit
         flex
@@ -69,6 +83,26 @@ const AvatarDisplay: React.FC<Props> = ({ username, githubhandle, joindate, avat
 					{joindate}
 				</h4>
 			</div>
+			<p
+				className="avatar-display-bio
+					truncate
+					hover:overflow-y-scroll
+					hover:whitespace-normal
+					row-span-2
+					col-span-4
+          h-[7.5rem]
+          w-full
+          text-h4
+          text-primary
+          dark:text-dark-primary
+          dark:opacity-75
+					lg:h-[5rem]
+					lg:col-start-2
+					lg:col-end-5
+          "
+			>
+				{bio}
+			</p>
 		</div>
 	);
 };

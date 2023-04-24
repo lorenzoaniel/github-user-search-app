@@ -129,19 +129,10 @@ const Home: React.FC = () => {
 					githubhandle={"@test"}
 					joindate={"Jan 25th, 2016"}
 					avatarimgsrc={""}
+					bio={
+						"TEST BIO INFO REPLACE WITH API RESPONSE TEST BIO INFO REPLACE WITH API RESPONSE TEST BIO INFO REPLACE WITH API RESPONSE TEST BIO INFO REPLACE WITH API RESPONSE TEST BIO INFO REPLACE WITH API RESPONSE TEST BIO INFO REPLACE WITH API RESPONSE TEST BIO INFO REPLACE WITH API RESPONSE TEST BIO INFO REPLACE WITH API RESPONSE TEST BIO INFO REPLACE WITH API RESPONSE TEST BIO INFO REPLACE WITH API RESPONSE"
+					}
 				/>
-				<p
-					className="main-section-bio
-          h-[7.5rem]
-          w-full
-          text-h4
-          text-primary
-          dark:text-dark-primary
-          dark:opacity-75
-          "
-				>
-					{"TEST BIO INFO REPLACE WITH API RESPONSE"}
-				</p>
 				<StatsDisplay repocount={8} followercount={3938} followingcount={9} />
 				<LinksDisplay>
 					<Links variant={"location"} linkData={"San Francisco"} />
