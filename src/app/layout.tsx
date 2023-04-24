@@ -24,6 +24,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 					md:px-[9.7rem]
 					md:pt-[14rem]
 					md:pb-[23.6rem]
+					lg:px-[35.5rem]
+					lg:pt-[14.4rem]
+					lg:pb-[17rem]
 			"
 			>
 				{children}

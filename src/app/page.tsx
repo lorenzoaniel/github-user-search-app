@@ -28,6 +28,7 @@ const Home: React.FC = () => {
         items-center
         justify-between
         md:w-[57.3rem]
+        lg:w-[73rem]
         "
 			>
 				<h1
@@ -57,6 +58,7 @@ const Home: React.FC = () => {
         dark:shadow-dark-container
         md:w-[57.3rem]
         md:h-[6.9rem]
+        lg:w-[73rem]
         "
 			>
 				<Image
@@ -78,6 +80,7 @@ const Home: React.FC = () => {
           w-[3rem]
           h-full
           md:inline
+          lg:w-[15rem]
           "
 				>
 					{""}
@@ -114,7 +117,11 @@ const Home: React.FC = () => {
         dark:bg-dark-primary
         dark:shadow-dark-container
         md:w-[57.3rem]
-
+        md:p-[4rem]
+        md:h-[48.1rem]
+        md:gap-y-[3rem]
+        lg:w-[73rem]
+        lg:h-[44.4rem]
         "
 			>
 				<AvatarDisplay
