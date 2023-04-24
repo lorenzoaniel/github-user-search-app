@@ -6,22 +6,28 @@ module.exports = {
 		"./src/app/**/*.{js,ts,jsx,tsx}",
 	],
 	theme: {
-		backgroundColor: {
-			primary: "#FEFEFE",
-			secondary: "#F6F8FF",
-			"btn-primary": "#0079FF",
-			"dark-primary": "#1E2A47",
-			"dark-secondary": "#141D2F",
-			"dark-btn-primary": "#0079FF",
-		},
-		textColor: {
-			primary: "#4B6A9B",
-			secondary: "#2B3442",
-			"link-primary": "#0079FF",
-			toggle: "#697C9A",
-			"btn-primary": "#FFFFFF",
-			"dark-btn-primary": "#FEFEFE",
-			"dark-primary": "#FFFFFF",
+		extend: {
+			backgroundColor: {
+				primary: "#FEFEFE",
+				secondary: "#F6F8FF",
+				"btn-primary": "#0079FF",
+				"dark-primary": "#1E2A47",
+				"dark-secondary": "#141D2F",
+				"dark-btn-primary": "#0079FF",
+			},
+			textColor: {
+				primary: "#4B6A9B",
+				secondary: "#2B3442",
+				"link-primary": "#0079FF",
+				toggle: "#697C9A",
+				"btn-primary": "#FFFFFF",
+				"dark-btn-primary": "#FEFEFE",
+				"dark-primary": "#FFFFFF",
+			},
+			screens: {
+				md: "768px",
+				lg: "1440px",
+			},
 		},
 		fontFamily: {
 			spacebold: [`spacemonobold`, "monospace"],
@@ -49,5 +55,6 @@ module.exports = {
 			textColor: ["dark"],
 		},
 	},
+
 	plugins: [],
 };
