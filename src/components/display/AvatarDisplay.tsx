@@ -49,6 +49,12 @@ const AvatarDisplay: React.FC<Props> = ({
         flex
         flex-col
 				self-center
+				lg:flex-row
+				lg:col-span-3
+				lg:grid
+				lg:grid-cols-3
+				lg:grid-rows-2
+				lg:w-full
         "
 			>
 				<h3
@@ -58,6 +64,8 @@ const AvatarDisplay: React.FC<Props> = ({
           text-secondary
           dark:text-dark-primary
 					md:text-h1
+					lg:col-span-2
+					lg:row-span-1
           "
 				>
 					{username}
@@ -68,6 +76,8 @@ const AvatarDisplay: React.FC<Props> = ({
           text-link-primary
           dark:text-link-primary
 					md:text-h3
+					lg:col-span-2
+					lg:row-span-2
           "
 				>
 					{githubhandle}
@@ -78,6 +88,8 @@ const AvatarDisplay: React.FC<Props> = ({
           text-toggle
           dark:text-dark-primary
 					md:text-body
+					lg:col-start-3
+					lg:row-start-1
           "
 				>
 					{joindate}
