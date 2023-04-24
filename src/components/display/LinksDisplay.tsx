@@ -20,6 +20,9 @@ const LinksDisplay: React.FC<Props> = ({ children }) => {
 			md:flex-wrap
 			md:justify-between
 			md:gap-x-[10rem]
+			lg:w-[48rem]
+      lg:self-end
+			lg:h-[6.3rem]
       "
 		>
 			{children}

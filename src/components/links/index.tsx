@@ -68,6 +68,7 @@ const Links: React.FC<Props> = ({ variant, linkData }) => {
           ${linkData ?? "opacity-50"}
           text-primary
           dark:text-dark-primary
+					lg:text-body
           `}
 				>
 					{linkData ?? "Not Available"}
@@ -81,6 +82,7 @@ const Links: React.FC<Props> = ({ variant, linkData }) => {
           ${linkData ?? "opacity-50"}
           text-primary
           dark:text-dark-primary
+					lg:text-body
           `}
 				>
 					{linkData ?? "Not Available"}
