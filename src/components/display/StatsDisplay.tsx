@@ -35,6 +35,7 @@ const StatsDisplay: React.FC<Props> = ({ repocount, followercount, followingcoun
           text-statstitle
           text-secondary
           dark:text-dark-primary
+          dark:opacity-50
           "
 				>
 					{"Repos"}
@@ -42,8 +43,10 @@ const StatsDisplay: React.FC<Props> = ({ repocount, followercount, followingcoun
 				<h3
 					className="stats-display-reposwrapper-repodata
           text-h3
-          text-primary
+          font-bold
+          text-secondary
           dark:text-dark-primary
+
           text-center
           "
 				>
@@ -64,6 +67,7 @@ const StatsDisplay: React.FC<Props> = ({ repocount, followercount, followingcoun
           text-statstitle
           text-secondary
           dark:text-dark-primary
+          dark:opacity-50
           "
 				>
 					{"Followers"}
@@ -71,7 +75,8 @@ const StatsDisplay: React.FC<Props> = ({ repocount, followercount, followingcoun
 				<h3
 					className="stats-display-followerswrapper-followersdata
           text-h3
-          text-primary
+          font-bold
+          text-secondary
           dark:text-dark-primary
           text-center
           "
@@ -93,6 +98,7 @@ const StatsDisplay: React.FC<Props> = ({ repocount, followercount, followingcoun
           text-statstitle
           text-secondary
           dark:text-dark-primary
+          dark:opacity-50
           "
 				>
 					{"Following"}
@@ -100,7 +106,8 @@ const StatsDisplay: React.FC<Props> = ({ repocount, followercount, followingcoun
 				<h3
 					className="stats-display-followingwrapper-followingdata
           text-h3
-          text-primary
+          font-bold
+          text-secondary
           dark:text-dark-primary
           text-center
           "

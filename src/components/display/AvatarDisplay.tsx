@@ -18,7 +18,16 @@ const AvatarDisplay: React.FC<Props> = ({ username, githubhandle, joindate, avat
       gap-x-[1.95rem]
       "
 		>
-			<Image width={70} height={70} src={avatarimgsrc} alt="avatar-img" />
+			<Image
+				className="avatar-display-img
+				md:w-[11.7rem]
+				md:h-[11.7rem]
+				"
+				width={70}
+				height={70}
+				src={avatarimgsrc}
+				alt="avatar-img"
+			/>
 			<div
 				className="avatar-display-descwrapper
         h-[6.9rem]
@@ -30,8 +39,10 @@ const AvatarDisplay: React.FC<Props> = ({ username, githubhandle, joindate, avat
 				<h3
 					className="avatar-display-descwrapper-username
           text-h3
+					font-bold
           text-secondary
           dark:text-dark-primary
+					md:text-h1
           "
 				>
 					{username}
@@ -41,6 +52,7 @@ const AvatarDisplay: React.FC<Props> = ({ username, githubhandle, joindate, avat
           text-h4
           text-link-primary
           dark:text-link-primary
+					md:text-h3
           "
 				>
 					{githubhandle}
@@ -50,6 +62,7 @@ const AvatarDisplay: React.FC<Props> = ({ username, githubhandle, joindate, avat
           text-h4
           text-toggle
           dark:text-dark-primary
+					md:text-body
           "
 				>
 					{joindate}

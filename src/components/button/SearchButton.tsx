@@ -12,6 +12,9 @@ const SearchButton: React.FC = () => {
       text-btn-primary
       dark:bg-dark-btn-primary
       dark:text-dark-btn-primary
+      md:h-[5rem]
+      md:w-[10.6rem]
+      md:text-h3
       "
 		>
 			Search

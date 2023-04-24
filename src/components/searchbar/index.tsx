@@ -13,6 +13,8 @@ const SearchBar: React.FC = () => {
       text-ellipsis
       dark:bg-dark-primary
       focus:outline-none
+      md:w-[25.4rem]
+      md:text-h3
       "
 			placeholder={placeholder}
 		/>

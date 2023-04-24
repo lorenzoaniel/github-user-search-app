@@ -21,6 +21,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 					pb-[7.9rem]
           font-monospace
           dark:bg-dark-secondary
+					md:px-[9.7rem]
+					md:pt-[14rem]
+					md:pb-[23.6rem]
 			"
 			>
 				{children}
