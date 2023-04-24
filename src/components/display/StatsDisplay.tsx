@@ -19,6 +19,11 @@ const StatsDisplay: React.FC<Props> = ({ repocount, followercount, followingcoun
       p-[1.5rem]
       rounded-[1rem]
       dark:bg-dark-secondary
+      lg:w-[48rem]
+      lg:self-end
+      lg:justify-start
+      lg:pl-[3.2rem]
+      lg:gap-x-[9.5rem]
       "
 		>
 			<div
@@ -28,6 +33,7 @@ const StatsDisplay: React.FC<Props> = ({ repocount, followercount, followingcoun
         w-fit
         h-[4.8rem]
         gap-y-[0.8rem]
+        lg:gap-y-0
         "
 			>
 				<h6
@@ -36,6 +42,7 @@ const StatsDisplay: React.FC<Props> = ({ repocount, followercount, followingcoun
           text-secondary
           dark:text-dark-primary
           dark:opacity-50
+          lg:text-h4
           "
 				>
 					{"Repos"}
@@ -46,8 +53,9 @@ const StatsDisplay: React.FC<Props> = ({ repocount, followercount, followingcoun
           font-bold
           text-secondary
           dark:text-dark-primary
-
           text-center
+          lg:text-h2
+          lg:text-left
           "
 				>
 					{repocount}
@@ -60,6 +68,7 @@ const StatsDisplay: React.FC<Props> = ({ repocount, followercount, followingcoun
         w-fit
         h-[4.8rem]
         gap-y-[0.8rem]
+        lg:gap-y-0
         "
 			>
 				<h6
@@ -68,6 +77,7 @@ const StatsDisplay: React.FC<Props> = ({ repocount, followercount, followingcoun
           text-secondary
           dark:text-dark-primary
           dark:opacity-50
+          lg:text-h4
           "
 				>
 					{"Followers"}
@@ -79,6 +89,8 @@ const StatsDisplay: React.FC<Props> = ({ repocount, followercount, followingcoun
           text-secondary
           dark:text-dark-primary
           text-center
+          lg:text-h2
+          lg:text-left
           "
 				>
 					{followercount}
@@ -91,6 +103,7 @@ const StatsDisplay: React.FC<Props> = ({ repocount, followercount, followingcoun
         w-fit
         h-[4.8rem]
         gap-y-[0.8rem]
+        lg:gap-y-0
         "
 			>
 				<h6
@@ -99,6 +112,7 @@ const StatsDisplay: React.FC<Props> = ({ repocount, followercount, followingcoun
           text-secondary
           dark:text-dark-primary
           dark:opacity-50
+          lg:text-h4
           "
 				>
 					{"Following"}
@@ -110,6 +124,8 @@ const StatsDisplay: React.FC<Props> = ({ repocount, followercount, followingcoun
           text-secondary
           dark:text-dark-primary
           text-center
+          lg:text-h2
+          lg:text-left
           "
 				>
 					{followingcount}
