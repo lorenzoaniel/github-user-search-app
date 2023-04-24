@@ -26,6 +26,8 @@ const AvatarDisplay: React.FC<Props> = ({
       h-fit
       gap-x-[1.95rem]
 			gap-y-[3.3rem]
+			lg:grid-rows-[7.6rem, fit-content]
+			lg:gap-y-0
       "
 		>
 			<Image
@@ -34,6 +36,7 @@ const AvatarDisplay: React.FC<Props> = ({
 				col-span-1
 				md:w-[11.7rem]
 				md:h-[11.7rem]
+				lg:row-span-2
 				"
 				width={70}
 				height={70}
@@ -55,6 +58,8 @@ const AvatarDisplay: React.FC<Props> = ({
 				lg:grid-cols-3
 				lg:grid-rows-2
 				lg:w-full
+				lg:self-start
+				lg:row-span-1
         "
 			>
 				<h3
@@ -111,6 +116,8 @@ const AvatarDisplay: React.FC<Props> = ({
 					lg:h-[5rem]
 					lg:col-start-2
 					lg:col-end-5
+					lg:row-start-2
+					lg:row-end-2
           "
 			>
 				{bio}
