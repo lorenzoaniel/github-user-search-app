@@ -112,7 +112,7 @@ const Home: React.FC = () => {
         mt-[1.6rem]
         px-[2.4rem]
         pt-[3.2rem]
-        pb-[4.8rem]
+        
         gap-y-[2.5rem]
         dark:bg-dark-primary
         dark:shadow-dark-container
@@ -122,6 +122,7 @@ const Home: React.FC = () => {
         md:gap-y-[3rem]
         lg:w-[73rem]
         lg:h-[44.4rem]
+        lg:justify-between
         "
 			>
 				<AvatarDisplay
