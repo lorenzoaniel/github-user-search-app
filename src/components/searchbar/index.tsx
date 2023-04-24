@@ -15,6 +15,7 @@ const SearchBar: React.FC = () => {
       focus:outline-none
       md:w-[25.4rem]
       md:text-h3
+      lg:text-[1.8rem]
       "
 			placeholder={placeholder}
 		/>
