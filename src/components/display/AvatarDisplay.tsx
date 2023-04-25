@@ -16,7 +16,7 @@ const AvatarDisplay: React.FC<Props> = ({
 	githubhandle = "Not Available",
 	joindate = null,
 	avatarimgsrc = "/",
-	bio = "Not Available",
+	bio = "This profile has no bio",
 }) => {
 	const [userData, setUserData] = useState({ username, githubhandle, joindate, avatarimgsrc, bio });
 	const formatDate = useCallback((dateString: string | number | Date) => {

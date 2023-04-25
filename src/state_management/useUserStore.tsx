@@ -14,13 +14,16 @@ location?: string;
   twitter_username?: string;
   company?: string | null; */
 
+const testbio =
+	"TEST TESTTESTTEST TEST TESTTESTTEST TEST TESTTESTTEST TEST TESTTESTTEST TEST TESTTESTTEST TEST TESTTESTTEST TEST TESTTESTTEST TEST TESTTESTTEST TEST TESTTESTTEST TEST TESTTESTTEST ";
+
 export const useUserStore = create<UserStore>((set, get) => ({
 	user: {
 		login: "ocotocat",
 		name: "The Octocat",
 		created_at: "2011-01-25T18:44:36Z",
 		avatar_url: "https://avatars.githubusercontent.com/u/583231?v=4",
-		bio: "This profile has no bio",
+		bio: testbio,
 		public_repos: 8,
 		followers: 3938,
 		following: 9,

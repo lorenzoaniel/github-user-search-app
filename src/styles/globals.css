@@ -26,6 +26,10 @@
 	box-sizing: border-box;
 	font-family: "spacemonoregular", "arial";
 	text-overflow: ellipsis;
+
+	/* Hide scrollbar for Firefox */
+	scrollbar-width: thin;
+	-ms-overflow-style: none; /* IE and Edge */
 }
 
 /* Set the width of the scrollbar */

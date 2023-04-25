@@ -18,18 +18,12 @@ import { useUserStore } from "@/state_management/useUserStore";
   DYNAMIC VALUES STILL APPLY ONCE YOU SEARCH FOR A USER 
 */
 
-const Home: React.FC<{ initialUser: any }> = ({ initialUser }) => {
-	// const setUser = useUserStore((state) => state.setUser);
+const Home: React.FC = () => {
 	let user: any = useUserStore((state) => state.user);
-	console.log(user);
-	// const loading = useUserStore((state) => state.loading);
-	// const error = useUserStore((state) => state.error);
 
 	const img_src = {
 		searchbaricon: "./assets/images/icon-search.svg", //default
 	};
-
-	//TODO when user clicks search button call useUserStore and grab the value of searchbar and place value into hook
 
 	return (
 		<>

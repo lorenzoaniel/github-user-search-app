@@ -92,8 +92,8 @@ const Links: React.FC<Props> = ({ variant, linkData = null }) => {
 					lg:text-body
 					hover:underline
           `}
-					target={linkData ?? ""}
-					href={linkData ?? "javascript:void(0)"}
+					target={linkData ? "_blank" : ""}
+					href={linkData ?? "#"}
 				>
 					{linkData ?? "Not Available"}
 				</a>
