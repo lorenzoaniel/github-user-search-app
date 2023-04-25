@@ -30,7 +30,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Results Summary Component solution](https://www.frontendmentor.io/solutions/results-summary-component-tailwindcssreactjstypescriptvite-_0B21X_Lva)
-- Live Site URL: [Results Summary Component livesite](https://lorenzoaniel.github.io/results-summary-component/)
+- Live Site URL: [Results Summary Component livesite](https://github-user-search-app-lorenzoaniel.vercel.app/)
 
 ## My process
 
