@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 
 interface Props {
@@ -6,7 +8,11 @@ interface Props {
 	followingcount: number;
 }
 
-const StatsDisplay: React.FC<Props> = ({ repocount, followercount, followingcount }) => {
+const StatsDisplay: React.FC<Props> = ({
+	repocount = 0,
+	followercount = 0,
+	followingcount = 0,
+}) => {
 	return (
 		<aside
 			className="stats-display

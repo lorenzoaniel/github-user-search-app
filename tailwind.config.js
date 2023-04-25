@@ -14,6 +14,8 @@ module.exports = {
 				"dark-primary": "#1E2A47",
 				"dark-secondary": "#141D2F",
 				"dark-btn-primary": "#0079FF",
+				"dark-hover-btn": "#60ABFF",
+				"hover-btn": "#60ABFF",
 			},
 			textColor: {
 				primary: "#4B6A9B",
@@ -23,6 +25,8 @@ module.exports = {
 				"btn-primary": "#FFFFFF",
 				"dark-btn-primary": "#FEFEFE",
 				"dark-primary": "#FFFFFF",
+				"hover-darkmode": "#222731",
+				"dark-hover-darkmode": "#90A4D4",
 			},
 			screens: {
 				md: "768px",
@@ -46,6 +50,10 @@ module.exports = {
 			boxShadow: {
 				container: "0 1.6rem 3rem 1rem rgba(70, 96, 187, 0.198567)",
 				"dark-container": "0 0 0 0 rgba(70, 96, 187, 0)",
+			},
+			colors: {
+				"hover-darkmode": "#222731",
+				"dark-hover-darkmode": "#90A4D4",
 			},
 		},
 	},

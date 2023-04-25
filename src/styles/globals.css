@@ -25,6 +25,7 @@
 * {
 	box-sizing: border-box;
 	font-family: "spacemonoregular", "arial";
+	text-overflow: ellipsis;
 }
 
 /* Set the width of the scrollbar */

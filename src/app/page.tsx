@@ -1,5 +1,6 @@
+"use client";
+
 import Image from "next/image";
-import React from "react";
 
 import DarkModeToggleButton from "@/components/button/DarkModeToggleButton";
 import SearchButton from "@/components/button/SearchButton";
@@ -8,11 +9,24 @@ import AvatarDisplay from "@/components/display/AvatarDisplay";
 import StatsDisplay from "@/components/display/StatsDisplay";
 import LinksDisplay from "@/components/display/LinksDisplay";
 import Links from "@/components/links";
+import { useUserStore } from "@/state_management/useUserStore";
 
-const Home: React.FC = () => {
-	const userData = null;
+/* 
+  DUE TO THE API REQUEST LIMIT FOR GITHUB UNAUTHORIZED REQ (no personal token passed to req) OF 60 REQS/HR, I HAVE DECIDED TO PLACE STATIC VALUES FOR THE INITIAL RENDER,
+  BUT IF YOU WOULD LIKE TO HAVE EVERYTHING DYNAMIC, SIMPLY ADD YOUR OWN PERSONAL TOKEN(5000 REQS/HR) WITH THE REQUEST
+  SO THAT YOU CAN GET A SIGNIFICANTLY HIGHER LIMITS AND REPLACE THE INITIAL VALUES WITH NULLS INCASE OF ANY RES ERRORS. 
+  DYNAMIC VALUES STILL APPLY ONCE YOU SEARCH FOR A USER 
+*/
+
+const Home: React.FC<{ initialUser: any }> = ({ initialUser }) => {
+	// const setUser = useUserStore((state) => state.setUser);
+	let user: any = useUserStore((state) => state.user);
+	console.log(user);
+	// const loading = useUserStore((state) => state.loading);
+	// const error = useUserStore((state) => state.error);
+
 	const img_src = {
-		searchbaricon: "./assets/images/icon-search.svg",
+		searchbaricon: "./assets/images/icon-search.svg", //default
 	};
 
 	//TODO when user clicks search button call useUserStore and grab the value of searchbar and place value into hook
@@ -93,7 +107,7 @@ const Home: React.FC = () => {
           text-red-500
           md:opacity-0
           md:inline
-          ${userData ?? "md:opacity-100"}
+          ${user.message === "Not Found" ? "md:opacity-100" : ""}
           `}
 				>
 					{"No results"}
@@ -121,25 +135,27 @@ const Home: React.FC = () => {
         md:h-[48.1rem]
         md:gap-y-[3rem]
         lg:w-[73rem]
-        lg:h-[44.4rem]
+        lg:h-[41.9rem]
         lg:justify-between
         "
 			>
 				<AvatarDisplay
-					username={"The Octocat"}
-					githubhandle={"@test"}
-					joindate={"Jan 25th, 2016"}
-					avatarimgsrc={""}
-					bio={
-						"TEST BIO INFO REPLACE WITH API RESPONSE TEST BIO INFO REPLACE WITH API RESPONSE TEST BIO INFO REPLACE WITH API RESPONSE TEST BIO INFO REPLACE WITH API RESPONSE TEST BIO INFO REPLACE WITH API RESPONSE TEST BIO INFO REPLACE WITH API RESPONSE TEST BIO INFO REPLACE WITH API RESPONSE TEST BIO INFO REPLACE WITH API RESPONSE TEST BIO INFO REPLACE WITH API RESPONSE TEST BIO INFO REPLACE WITH API RESPONSE"
-					}
+					username={user?.name}
+					githubhandle={user?.login}
+					joindate={user?.created_at}
+					avatarimgsrc={user?.avatar_url}
+					bio={user?.bio}
 				/>
-				<StatsDisplay repocount={8} followercount={3938} followingcount={9} />
+				<StatsDisplay
+					repocount={user?.public_repos}
+					followercount={user?.followers}
+					followingcount={user?.following}
+				/>
 				<LinksDisplay>
-					<Links variant={"location"} linkData={"San Francisco"} />
-					<Links variant={"blog"} linkData={null} />
-					<Links variant={"twitter"} linkData={null} />
-					<Links variant={"company"} linkData={null} />
+					<Links linkData={user?.location} variant={"location"} />
+					<Links linkData={user?.blog} variant={"blog"} />
+					<Links linkData={user?.twitter_username} variant={"twitter"} />
+					<Links linkData={user?.company} variant={"company"} />
 				</LinksDisplay>
 			</main>
 		</>

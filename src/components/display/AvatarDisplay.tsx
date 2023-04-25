@@ -1,21 +1,68 @@
+"use client";
+
 import Image from "next/image";
-import React from "react";
+import React, { useCallback, useEffect, useState } from "react";
 
 interface Props {
-	username: string;
-	githubhandle: string;
-	joindate: string;
-	avatarimgsrc: string;
-	bio: string;
+	username?: string | null;
+	githubhandle?: string | null;
+	joindate?: string | null;
+	avatarimgsrc?: string;
+	bio?: string | null;
 }
 
 const AvatarDisplay: React.FC<Props> = ({
-	username,
-	githubhandle,
-	joindate,
-	avatarimgsrc,
-	bio,
+	username = "Not Available",
+	githubhandle = "Not Available",
+	joindate = null,
+	avatarimgsrc = "/",
+	bio = "Not Available",
 }) => {
+	const [userData, setUserData] = useState({ username, githubhandle, joindate, avatarimgsrc, bio });
+	const formatDate = useCallback((dateString: string | number | Date) => {
+		const monthNames = [
+			"Jan",
+			"Feb",
+			"Mar",
+			"Apr",
+			"May",
+			"Jun",
+			"Jul",
+			"Aug",
+			"Sep",
+			"Oct",
+			"Nov",
+			"Dec",
+		];
+
+		const date = new Date(dateString);
+		const day = date.getDate();
+		const monthIndex = date.getMonth();
+		const year = date.getFullYear();
+
+		const suffix =
+			day % 10 === 1 && day !== 11
+				? "st"
+				: day % 10 === 2 && day !== 12
+				? "nd"
+				: day % 10 === 3 && day !== 13
+				? "rd"
+				: "th";
+
+		return `${monthNames[monthIndex]} ${day}${suffix}, ${year}`;
+	}, []);
+
+	useEffect(() => {
+		setUserData((curr) => ({
+			...curr,
+			...(username !== curr.username && { username }),
+			...(githubhandle !== curr.githubhandle && { githubhandle }),
+			...(joindate !== curr.joindate && { joindate }),
+			...(avatarimgsrc !== curr.avatarimgsrc && { avatarimgsrc }),
+			...(bio !== curr.bio && { bio }),
+		}));
+	}, [username, githubhandle, joindate, avatarimgsrc, bio]);
+
 	return (
 		<div
 			className="avatar-display
@@ -32,15 +79,22 @@ const AvatarDisplay: React.FC<Props> = ({
 		>
 			<Image
 				className="avatar-display-img
+				rounded-full
 				row-span-1
 				col-span-1
+				self-center
+				justify-self-center
 				md:w-[11.7rem]
 				md:h-[11.7rem]
 				lg:row-span-2
+				lg:mr-[5rem]
+				lg:ml-[2rem]
+				lg:w-[13rem]
+				lg:h-[13rem]
 				"
 				width={70}
 				height={70}
-				src={avatarimgsrc}
+				src={userData.avatarimgsrc}
 				alt="avatar-img"
 			/>
 			<div
@@ -64,6 +118,7 @@ const AvatarDisplay: React.FC<Props> = ({
 			>
 				<h3
 					className="avatar-display-descwrapper-username
+					truncate
           text-h3
 					font-bold
           text-secondary
@@ -73,7 +128,7 @@ const AvatarDisplay: React.FC<Props> = ({
 					lg:row-span-1
           "
 				>
-					{username}
+					{userData.username}
 				</h3>
 				<h4
 					className="avatar-display-descwrapper-githubhandle
@@ -85,7 +140,7 @@ const AvatarDisplay: React.FC<Props> = ({
 					lg:row-span-2
           "
 				>
-					{githubhandle}
+					{"@" + userData.githubhandle}
 				</h4>
 				<h4
 					className="avatar-display-descwrapper-joindate
@@ -95,9 +150,10 @@ const AvatarDisplay: React.FC<Props> = ({
 					md:text-body
 					lg:col-start-3
 					lg:row-start-1
+					lg:justify-self-end
           "
 				>
-					{joindate}
+					{userData.joindate ? formatDate(userData.joindate) : "Not Available"}
 				</h4>
 			</div>
 			<p
@@ -120,7 +176,7 @@ const AvatarDisplay: React.FC<Props> = ({
 					lg:row-end-2
           "
 			>
-				{bio}
+				{userData.bio ?? "Not Available"}
 			</p>
 		</div>
 	);

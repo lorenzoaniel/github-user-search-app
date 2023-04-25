@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 
 const SearchBar: React.FC = () => {
@@ -7,6 +9,10 @@ const SearchBar: React.FC = () => {
 		<input
 			className="search-bar
       bg-primary
+      text-primary
+      dark:text-dark-primary
+      caret-blue-500
+      focus:caret-blue-500
       h-[2.5rem]
       w-[18.4rem]
       text-searchbar

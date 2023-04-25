@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 
 interface Props {
@@ -15,14 +17,14 @@ const LinksDisplay: React.FC<Props> = ({ children }) => {
       items-start
       gap-y-[1.6rem]
 			md:h-[10rem]
-			md:flex-row
+			md:grid
+			md:grid-cols-2
 			md:w-[42.9rem]
-			md:flex-wrap
-			md:justify-between
 			md:gap-x-[10rem]
 			lg:w-[48rem]
       lg:self-end
-			lg:h-[6.3rem]
+			lg:h-full
+			lg:justify-start
       "
 		>
 			{children}
