@@ -18,8 +18,12 @@ This is a solution to the [GitHub user search app challenge on Frontend Mentor](
 
 Users should be able to:
 
-- View the optimal layout for the interface depending on their device's screen size
-- See hover and focus states for all interactive elements on the page
+- View the optimal layout for the app depending on their device's screen size
+- See hover states for all interactive elements on the page
+- Search for GitHub users by their username
+- See relevant user information based on their search
+- Switch between light and dark themes
+- **Bonus**: Have the correct color scheme chosen for them based on their computer preferences. _Hint_: Research `prefers-color-scheme` in CSS.
 
 ### Screenshot
 
@@ -29,7 +33,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Results Summary Component solution](https://www.frontendmentor.io/solutions/results-summary-component-tailwindcssreactjstypescriptvite-_0B21X_Lva)
+- Solution URL: [Results Summary Component solution](https://www.frontendmentor.io/solutions/github-user-search-app-nextjs13reactjststailwindcsszustand-DFuosMKtls)
 - Live Site URL: [Results Summary Component livesite](https://github-user-search-app-lorenzoaniel.vercel.app/)
 
 ## My process
@@ -41,7 +45,7 @@ Users should be able to:
 - CSS Grid
 - Mobile-first workflow
 - [React](https://reactjs.org/) - JS library
-- [NEXTJS13](https://nextjs.org/) - React Framework
+- [Next.js](https://nextjs.org/) - React framework
 - [TailWindCSS](https://tailwindcss.com/) - For styles/animations
 
 ## Author
